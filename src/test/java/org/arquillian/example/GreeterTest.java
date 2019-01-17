@@ -21,14 +21,14 @@ public class GreeterTest {
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
         System.out.println(jar.toString(true));
         return jar;
-    }git
+    }
 
     @Inject
     Greeter greeter;
 
     @Test
     public void should_create_greeting(){
-        Assert.assertEquals("Hello, Lash!",
+        Assert.assertEquals("Hello, LAsh!",
                 greeter.createGreeting("Lash"));
         greeter.greet(System.out, "Lash");
 
