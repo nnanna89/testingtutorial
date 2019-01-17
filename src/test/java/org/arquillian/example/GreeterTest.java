@@ -21,7 +21,7 @@ public class GreeterTest {
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
         System.out.println(jar.toString(true));
         return jar;
-    }git
+    }
 
     @Inject
     Greeter greeter;
