@@ -12,6 +12,6 @@ public class Greeter {
     }
 
     public String createGreeting(String name){
-        return "Hello, there" + name + "!";
+        return "Hello, " + name + "!";
     }
 }
