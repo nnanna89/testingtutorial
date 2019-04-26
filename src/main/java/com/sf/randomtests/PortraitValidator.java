@@ -42,6 +42,19 @@ public class PortraitValidator {
             return;
         }
 
+        //set the dlls in system props
+        String customPath = null;
+        if(args.length > 1){
+            customPath = args[1];
+        }else{
+            customPath = System.getProperty("user.dir");
+        }
+        System.out.println("Derived custom directory: " + customPath);
+
+        System.setProperty("com.aware.preface.PrefaceJNI.libPath", customPath + "\\aw_preface.dll");
+        System.setProperty("com.aware.preface.PrefaceJNI.jniLibPath", customPath + "\\aw_preface_jni.dll");
+
+
         //iterate through the images
         for(File imageFile : imageFileDir.listFiles()){
             //validate the image
